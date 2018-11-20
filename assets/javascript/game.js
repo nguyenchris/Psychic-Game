@@ -1,3 +1,4 @@
+// create object for game
 letterGuessGame = {
   letters: [],
   guessedLettersArr: [],
@@ -68,9 +69,11 @@ letterGuessGame = {
 letterGuessGame.genLettersArr("a", "z");
 letterGuessGame.genLetterToGuess();
 
-// Listener for keyup event
+
+// Listener for keyuo event
 document.addEventListener("keyup", function(e) {
   letterGuessGame.guessedLetter = e.key;
+
   //loop through all letters in guessLettersArr and only update letters guessed if it is a letter from a to z
   for (i = 0; i < letterGuessGame.letters.length; i++) {
     if (letterGuessGame.guessedLetter == letterGuessGame.letters[i]) {
